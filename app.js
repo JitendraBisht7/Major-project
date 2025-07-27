@@ -93,6 +93,11 @@ app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
 
+//Landing page 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 
 
 // 404 handler
